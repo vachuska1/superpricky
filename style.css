@@ -1,0 +1,598 @@
+/* Resetování stylů a základní stylizace */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-optical-sizing: auto;
+  }
+/* tabulkova koláž */
+p {
+  font-weight: 300;
+  text-align: justify;
+}
+
+  header {
+    background-image: linear-gradient(to bottom, rgba(46, 204, 113, 0.8), rgba(52, 152, 219, 0.8)); /* Teplé odstíny (oranžovo-červená) s průhledností 0.6 */
+    color: #fff;
+    height: 200px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    color: #f5f5f5;
+    font-weight: 600;
+    font-size:  100%;
+    text-decoration: none;
+    white-space: nowrap;
+  }  
+  .logo {
+    max-width: 400px;
+    width: 100%; /* Upraveno na 100% pro responsivitu */
+  }
+  
+  .menu {
+    display: flex;
+    align-items: center;
+  }
+/* Popis systemu koláž */
+.introduction-wrapper {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to top, rgba(255, 200, 80, 0.9), rgba(255, 101, 74, 0.9));
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center; /* Zarovnání na střed vodorovně */
+  align-items: center;
+}
+
+.introduction {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Maximální šířka bloku textu a obrázků */
+  margin: 0 auto; /* Tímto se umožní, aby se prvky přetékající do nového řádku začaly zobrazovat pod sebou */
+}
+
+.content {
+  width: calc(90% - 40% - 20px); /* Šířka obsahu - šířka obrázků - odsazení */
+  margin-right: 100px; /* Odsazení mezi obsahem a obrázky */
+}
+.Images {
+  padding: 20px 0;
+  width: 40%;
+  align-items: center;
+}
+
+.myDescriptions {
+  display: none;
+}
+
+.myDescriptions.active {
+  display: block;
+}
+
+.myDescriptions img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* konec popisu systemu */
+/* Tlačítka */
+.butt-desc {
+  border: 3px solid rgba(255, 66, 66, 0.9);
+    width: 100px;
+    margin-top: 10px;
+    height: auto;
+    padding: 5px;
+    border-radius: 10%;
+    background-color: rgba(255, 66, 66, 0.9);
+    color: white;
+    word-wrap: break-word;
+    z-index: 100;
+text-align: center;
+cursor: pointer;
+}
+
+.button-container-desc {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+
+/* tabulkova koláž - zacatek animace prezentace*/
+.full-table-section {
+  width: 100%;
+  margin: 40px 0;
+}
+.table-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Zarovnání obsahu vertikálně na začátek */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-table-column {
+  width: 60%; /* Původně šířka sloupce */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Zarovnání obsahu vertikálně na střed */
+  justify-content: center; /* Zarovnání obsahu horizontálně na střed */
+  margin-right: 20px; /* Odsazení od pravého sloupce */
+}
+
+.right-table-column {
+  width: 40%;
+  max-width: 40%;
+  margin: auto 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.right-table-column h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Styly pro koláž fotek */
+.table {
+  position: relative;
+  box-shadow: 10px 10px 10px 10px rgb(87, 85, 85);
+  background-color: white;
+  width: 100%; /* Změna na 100% */
+  max-height: auto;
+  height: auto;
+  text-align: center;
+  font-weight: 600;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.butt {
+  border: 3px solid rgb(11, 11, 11);
+  width: 100px; /* Nastavte šířku tlačítek podle požadovaného rozdělení */
+  height: 60px;
+  padding: 10px;
+  border-radius: 10%;
+  background-color: rgb(249, 162, 21);
+  color: rgb(54, 54, 54);
+  z-index: 100;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides.active {
+  display: block;
+}
+
+.mySlides img {
+  width: 100%;
+  height: auto;
+}
+/* konec tabulkova koláž */
+  /* konec prezentace */
+
+/* video */
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+/* zacatek udrzitelnost */
+.sustainability-wrapper {
+  width: 100%;
+  height: auto;
+  background-image: linear-gradient(to bottom, rgba(255, 135, 80, 0.9), rgba(255, 228, 74, 0.9));
+  color: #fff;  
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center; /* Zarovnání na střed vodorovně */
+  align-items: center;
+}
+
+.sustainability {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Maximální šířka bloku textu a obrázků */
+  margin: 0 auto; /* Tímto se umožní, aby se prvky přetékající do nového řádku začaly zobrazovat pod sebou */
+  align-items: center; 
+}
+
+.content {
+  width: calc(90% - 40% - 20px); /* Šířka obsahu - šířka obrázků - odsazení */
+  margin-right: 100px; /* Odsazení mezi obsahem a obrázky */
+}
+
+.head1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.head2 {
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+}
+.head2-left{
+  text-align: left;
+  font-size: 28px;
+  font-weight: 260;
+}
+.head1-left {
+  font-size: 30px;
+  text-align: left;
+  font-weight: 350;
+}
+.Images {
+  padding: 20px 0;
+  width: 40%;
+  align-items: center;
+}
+
+.mySustainability {
+  display: none;
+}
+
+.mySustainability.active {
+  display: block;
+}
+
+.mySustainability img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Tlačítka */
+.butt-sustainability {
+  border: 3px solid rgba(255, 66, 66, 0.9);
+  width: 100px;
+  margin-top: 10px;
+  height: auto;
+  padding: 5px;
+  border-radius: 10%;
+  background-color: rgba(255, 66, 66, 0.9);
+  color: white;
+  word-wrap: break-word;
+  z-index: 100;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button-container-sustainability {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* konec udrzitelnosti */
+
+
+
+
+  /* zacatek certifikace */
+  .full-certification-section {
+    width: 100%;
+    padding: 50px 0;
+    background: white;
+  }
+  
+  .certification-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dva sloupce vedle sebe */
+    gap: 50px; /* Mezera mezi sloupci */
+    margin: 0 auto; /* Odsazení od okraje */
+    max-width: 1200px; /* Maximální šířka bloku */
+    width: 95%; /* Šířka na 100% na mobilních zařízeních */
+  }
+  
+  .left-certification-column,
+  .right-certification-column {
+    width: 100%; /* Obě strany mají 100% šířku */
+    text-align: justify; /* Zarovnání textu na šířku */
+  }
+  .right-certification-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .links a {
+    display: block;
+    color: rgb(120, 9, 224, 0.9);
+    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 2.4;
+    -webkit-text-stroke-color: #3f035b;
+    -webkit-text-stroke-width: 0.6px; 
+    cursor: pointer;
+  }
+  /* konec certifikace */
+  
+  /* zacatek doprava  */
+  .traffic-wrapper {
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(to bottom, rgba(255, 200, 80, 0.9), rgba(255, 101, 74, 0.9));
+    color: white;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center; /* Zarovnání na střed vodorovně */
+    align-items: center;
+  }
+  
+  .traffic {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px; /* Maximální šířka bloku textu a obrázků */
+    margin: 0 auto; /* Tímto se umožní, aby se prvky přetékající do nového řádku začaly zobrazovat pod sebou */
+  }
+  
+  .left-traffic-content {
+    width: 50%; /* Šířka levého sloupce */
+    padding: 20px; /* Odsazení obsahu */
+  }
+  
+  .right-traffic-content {
+    width: 50%; /* Šířka pravého sloupce */
+    padding: 20px 0; /* Odsazení obsahu */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Zarovnání textu vertikálně na střed */
+    align-items: center; /* Zarovnání textu horizontálně na střed */
+  }
+  .content-traffic {
+    width: calc(100% - 0% - 100px); /* Šířka obsahu - šířka obrázků - odsazení */
+  margin-right: 5px;
+  }
+  
+  .Images-traffic {
+    padding: 20px 0;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .myTraffic {
+    display: none;
+    opacity: 0; /* Přidáme opacity 0 pro výchozí stav */
+    transform: translateX(100%); /* Počáteční pozice mimo obrazovku (vpravo) */
+  transition: opacity 2s ease, transform 2s ease; /* Přechod opacity a transform s 2 sekundovým zpožděním */
+  }
+  
+  .myTraffic.active {
+    display: block;
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideInFromRight 1.5s ease;
+  }
+  @keyframes slideInFromRight {
+    from {
+      opacity: 0;
+      transform: translateX(100%); /* Začíná mimo obrazovku (vpravo) */
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0); /* Končí ve středu */
+    }
+  }
+  
+  .myTraffic img {
+    width: 100%;
+  height: auto;
+  object-fit: contain;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.6); 
+  }
+  
+  /* Tlačítka */
+  .butt-traffic {
+    border: 3px solid rgb(255, 255, 255);
+    width: 100px;
+    margin-top: 10px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10%;
+    background-color: rgb(243, 130, 10);
+    color: white;
+    word-wrap: break-word;
+    z-index: 100;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .button-container-traffic {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  
+
+  /* konec doprava */
+
+  /* konec doprava */
+
+
+
+/* kontakty */
+.full-content-section {
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(46, 204, 113, 0.8), rgba(52, 152, 219, 0.8)); /* Syrové odstíny (zelená a modrá) s průhledností 0.7 */
+    color: #fff;
+}
+
+.footer {
+  width: 100%;
+  max-width: 1200px; /* Maximální šířka zápatí */
+  padding: 40px 0;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dva sloupce */
+  grid-template-rows: 1fr 1fr; /* Dva řádky */
+  gap: 20px; /* Odsazení mezi buňkami */
+  justify-items: center; /* Zarovnání obsahu na střed ve sloupcích */
+  align-items: center; /* Zarovnání obsahu na střed v řádcích */
+  margin: 0 auto; /* Centrování zápatí */
+}
+
+.item-a, .item-b, .item-c, .item-d {
+  padding: 20px;
+  text-align: center; /* Zarovnání textu na střed */
+}
+
+.item-c a {
+  font-size: 15px;
+  text-decoration: none;
+  color: rgb(59, 57, 56);
+  font-weight: 600;
+}
+.email-link {
+  color: rgb(59, 57, 56); /* Změna barvy odkazu na červenou */
+  text-decoration: none; /* Odstanění podtržení od odkazu */
+  font-weight: bold; /* Zvýraznění textu */
+  /* Další styly zde */
+}
+.icon {
+  margin-right: 10px;
+}
+
+/* Styly pro ikony (pro účel příkladu) */
+.icon img {
+  width: 30px;
+  height: 30px;
+}
+
+  /* konec kontakty */
+  
+  @media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+      }
+      
+      .logo {
+        text-align: center;
+        margin-bottom: 5px;
+      }
+      .head2-left{
+        text-align: center;
+      }
+      .head1-left {
+        text-align: center;
+      }
+      .menu {
+        width: 96%; /* Šířka menu na 96% */
+        max-width: 600px; /* Maximální šířka menu */
+        text-align: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamický grid layout */
+        gap: 50px;
+      }
+      
+      nav ul li {
+        text-align: center;
+      }
+      .nav-link {
+        font-size: 3vw; /* Velikost písma bude 3% šířky obrazovky */
+      }
+      .table-section {
+        flex-direction: column-reverse; /* Přehození pořadí sloupců */
+      }
+    
+      .left-table-column,
+      .right-table-column {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+      }
+    
+      .right-table-column {
+        margin: 20px 0; /* Odsazení od okrajů */
+      }
+      .mySlides img {
+        max-width: 100%;
+        max-height: 80vh; /* Maximální výška obrazu */
+      }
+
+      .introduction {
+        flex-direction: column; /* Obrázek a text se zobrazí pod sebou na menších obrazovkách */
+      }
+      .content {
+        width: 100%; /* Obsah bude zabírat celou šířku */
+        margin-right: 0; /* Zrušení pravého odsazení */
+      }
+      .Images {
+        width: 100%; /* Obrázek zabere celou šířku na menších obrazovkách */
+        margin-top: 20px; /* Mezera mezi textem a obrázkem */
+      }
+
+      /* zacatek certifikace */
+      .certification-section {
+        grid-template-columns: repeat(1, 1fr); /* Jeden sloupec pod druhým */
+        gap: 30; /* Žádná mezera mezi sloupci */
+      }
+    
+      .right-certification-column {
+        grid-row-start: 2; /* Pravý sloupec bude na druhém řádku */
+      }
+      /* zacatek doprava */
+      .traffic {
+        flex-direction: column-reverse; /* Přehození sloupců */
+      }
+    
+      .left-traffic-content,
+      .right-traffic-content {
+        width: 100%; /* Na mobilním zařízení zabere každý sloupec 100% */
+        padding: 20px 0; /* Odsazení obsahu */
+      }
+      .content-traffic {
+        width: calc(100% - 0% - 0px); /* Šířka obsahu - šířka obrázků - odsazení */
+      margin-right: 0;
+      }
+  }
